@@ -23,9 +23,12 @@ spec:
         version: v1
     spec:
       containers:
-        - envFrom:
-            - configMapRef:
-                name: chatgpt-secrets
+        - env:
+            - name: HIDE_USER_API_KEY
+              value: "1"
+          envFrom:
+            - secretRef:
+                name: openai-chatgpt-secrets
           image: registry.ap-southeast-1.aliyuncs.com/neutron/chatgpt
           imagePullPolicy: Always
           livenessProbe:
