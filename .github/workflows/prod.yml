@@ -1,4 +1,4 @@
-name: Fulai Prod CI/CD
+name: Prod Prod CI/CD
 on:
   push:
     branches:
