@@ -202,6 +202,7 @@ const en: LocaleType = {
       Config: {
         Modal: {
           Title: "Config Sync",
+          Check: "Check Connection",
         },
         SyncType: {
           Title: "Sync Type",
