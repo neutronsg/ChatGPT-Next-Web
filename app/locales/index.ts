@@ -9,9 +9,7 @@ import JP from "./jp";
 import DE from "./de";
 import VI from "./vi";
 import RU from "./ru";
-import CS from "./cs";
-import KO from "./ko";
-import { merge } from "../utils/merge";
+import NO from "./no";
 
 export type { LocaleType, RequiredLocaleType } from "./cn";
 
@@ -27,8 +25,7 @@ export const AllLangs = [
   "de",
   "vi",
   "ru",
-  "cs",
-  "ko",
+  "no",
 ] as const;
 export type Lang = (typeof AllLangs)[number];
 
@@ -112,6 +109,7 @@ const targetLang = {
   ru: RU,
   cs: CS,
   ko: KO,
+  no: NO,
 }[getLang()] as typeof CN;
 
 // if target lang missing some fields, it will use fallback lang string

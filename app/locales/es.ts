@@ -71,6 +71,19 @@ const es: LocaleType = {
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
       All: "Todos los idiomas",
+      Options: {
+        cn: "简体中文",
+        en: "English",
+        tw: "繁體中文",
+        es: "Español",
+        it: "Italiano",
+        tr: "Türkçe",
+        jp: "日本語",
+        de: "Deutsch",
+        vi: "Vietnamese",
+        ru: "Русский",
+        no: "Norsk",
+      },
     },
     Avatar: "Avatar",
     FontSize: {
