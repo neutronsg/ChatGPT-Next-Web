@@ -23,7 +23,10 @@ spec:
         version: v1
     spec:
       containers:
-        - image: registry.ap-southeast-1.aliyuncs.com/neutron/chatgpt
+        - envFrom:
+            - configMapRef:
+                name: chatgpt-secrets
+          image: registry.ap-southeast-1.aliyuncs.com/neutron/chatgpt
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 3

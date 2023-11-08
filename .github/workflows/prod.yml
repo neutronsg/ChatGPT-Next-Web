@@ -1,6 +1,9 @@
 name: Prod Prod CI/CD
 on:
+<<<<<<< HEAD
   workflow_dispatch:
+=======
+>>>>>>> af616fa (add enum)
   push:
     branches:
       - main
@@ -11,7 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REGISTRY_URL: registry.ap-southeast-1.aliyuncs.com             # set this to the URL of your registry
+<<<<<<< HEAD
       NAMESPACE: openai
+=======
+      namespace: openai
+>>>>>>> af616fa (add enum)
       ENVIRONMENT: prod
 
     steps:
@@ -31,7 +38,11 @@ jobs:
           context: .
           cache-from: type=gha
           cache-to: type=gha,mode=max
+<<<<<<< HEAD
           tags: ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
+=======
+          tags: ${{env.REGISTRY_URL}}/neutron/chatgpt:${{ github.sha }}
+>>>>>>> af616fa (add enum)
 
   deploy:
     name: Deploy
@@ -39,7 +50,11 @@ jobs:
     needs: [ build ]
     env:
       REGISTRY_URL: registry.ap-southeast-1.aliyuncs.com             # set this to the URL of your registry
+<<<<<<< HEAD
       NAMESPACE: openai
+=======
+      namespace: openai
+>>>>>>> af616fa (add enum)
       ENVIRONMENT: prod
 
     steps:
@@ -66,5 +81,9 @@ jobs:
             .deployment/${{env.ENVIRONMENT}}/deployments/app.yaml
             .deployment/${{env.ENVIRONMENT}}/services/service.yaml
           images: |
+<<<<<<< HEAD
             ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
+=======
+            ${{env.REGISTRY_URL}}/neutron/chatgpt:${{ github.sha }}
+>>>>>>> af616fa (add enum)
 
