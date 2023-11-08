@@ -15,10 +15,14 @@ jobs:
     env:
       REGISTRY_URL: registry.ap-southeast-1.aliyuncs.com             # set this to the URL of your registry
 <<<<<<< HEAD
+<<<<<<< HEAD
       NAMESPACE: openai
 =======
       namespace: openai
 >>>>>>> af616fa (add enum)
+=======
+      NAMESPACE: openai
+>>>>>>> 608e94a (add enum)
       ENVIRONMENT: prod
 
     steps:
@@ -39,10 +43,14 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 <<<<<<< HEAD
+<<<<<<< HEAD
           tags: ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
 =======
           tags: ${{env.REGISTRY_URL}}/neutron/chatgpt:${{ github.sha }}
 >>>>>>> af616fa (add enum)
+=======
+          tags: ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
+>>>>>>> 608e94a (add enum)
 
   deploy:
     name: Deploy
@@ -51,10 +59,14 @@ jobs:
     env:
       REGISTRY_URL: registry.ap-southeast-1.aliyuncs.com             # set this to the URL of your registry
 <<<<<<< HEAD
+<<<<<<< HEAD
       NAMESPACE: openai
 =======
       namespace: openai
 >>>>>>> af616fa (add enum)
+=======
+      NAMESPACE: openai
+>>>>>>> 608e94a (add enum)
       ENVIRONMENT: prod
 
     steps:
@@ -82,8 +94,12 @@ jobs:
             .deployment/${{env.ENVIRONMENT}}/services/service.yaml
           images: |
 <<<<<<< HEAD
+<<<<<<< HEAD
             ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
 =======
             ${{env.REGISTRY_URL}}/neutron/chatgpt:${{ github.sha }}
 >>>>>>> af616fa (add enum)
+=======
+            ${{env.REGISTRY_URL}}/neutron/chatgpt:latest
+>>>>>>> 608e94a (add enum)
 
