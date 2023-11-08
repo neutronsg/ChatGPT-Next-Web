@@ -44,10 +44,14 @@ spec:
           name: chatgpt
           ports:
 <<<<<<< HEAD
+<<<<<<< HEAD
             - containerPort: 3000
 =======
             - containerPort: 8080
 >>>>>>> 47474bc (add enum)
+=======
+            - containerPort: 3000
+>>>>>>> 2f1cfe3 (update service)
               name: http
               protocol: TCP
           readinessProbe:
