@@ -43,7 +43,11 @@ spec:
             timeoutSeconds: 1
           name: chatgpt
           ports:
+<<<<<<< HEAD
             - containerPort: 3000
+=======
+            - containerPort: 8080
+>>>>>>> 47474bc (add enum)
               name: http
               protocol: TCP
           readinessProbe:
